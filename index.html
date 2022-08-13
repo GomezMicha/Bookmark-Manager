@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="./images/favicon.svg"
+    />
+    <link rel="alternate icon" href="./favicon.ico" />
+    <!-- For Safari -->
+    <link rel=”mask-icon” href=”mask-icon.svg” color=”#000000">
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Bookmark Manager left-side content -->
+      <main id="main">
+        <div id="wrapper">
+          <header id="header"><h1>BOOKMARK MANAGER</h1></header>
+          <!-- Category button container -->
+          <div class="btn-cont">
+            <!-- Category button -->
+            <button class="add-category-btn">Add Category</button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Bookmark manager right-side content -->
+      <div id="category-cont"></div>
+
+      <div id="forms-co=-ntainer" class="forms-container">
+        <!-- Add Category container -->
+        <div class="add-category-cont" hidden>
+          <!-- Close Icon -->
+          <i class="fas fa-times-circle close-form"></i>
+          <!-- Form Container -->
+          <div class="form-cont">
+            <form action="" id="add-category-form">
+              <!-- Category Name -->
+              <div class="form-group">
+                <label for="category-name" class="form-label"
+                  >Category Name</label
+                >
+                <input
+                  type="text"
+                  class="form-input"
+                  id="category-name"
+                  maxlength="20"
+                  title="20 Characters Max"
+                  required
+                />
+              </div>
+              <button type="submit" class="save-btn">Save</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Add Bookmark form container -->
+        <div class="bookmark-form-cont" hidden>
+          <!-- Close Icon -->
+          <i class="fas fa-times-circle close-form"></i>
+          <!-- Form Container -->
+          <div class="form-cont">
+            <form action="" id="add-bookmark-form">
+              <!-- Bookmark Name -->
+              <div class="form-group">
+                <label for="bookmark-name" class="form-label"
+                  >Website Name</label
+                >
+                <input
+                  type="text"
+                  class="form-input"
+                  id="bookmark-name"
+                  maxlength="22"
+                  title="22 Characters Max"
+                  required
+                />
+              </div>
+              <!-- Bookmark Url -->
+              <div class="form-group">
+                <label for="bookmark-url" class="form-label">Website Url</label>
+                <input
+                  type="url"
+                  class="form-input"
+                  id="bookmark-url"
+                  placeholder="https://google.com"
+                  required
+                />
+              </div>
+              <button type="submit" class="save-btn">Save Bookmark</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Confirm delete of a Categpry container -->
+        <div class="confirm-delete-cont" hidden>
+          <i class="fas fa-times-circle close-form"></i>
+          <div class="confirm-delete-header"><h3></h3></div>
+          <div class="confirm-delete-message">
+            <p>
+              Once this Category is deleted all data will be lost and can't be
+              recovered.
+            </p>
+            <span>Are sure you want to permanently delete this Category?</span>
+          </div>
+          <div class="confirm-delete-btn">
+            <span onclick="confirm(true)">Sure!</span>
+            <span onclick="confirm(false)">Better Not!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

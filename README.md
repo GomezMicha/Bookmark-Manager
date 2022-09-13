@@ -4,7 +4,7 @@ A standalone web app to organize and save website urls within custom categories 
 
 Built with:
 * **[HTML5](https://github.com/whatwg/html).**
-* **[CCS3](https://www.w3.org/Style/CSS/Overview.en.html).**
+* **[CSS3](https://www.w3.org/Style/CSS/Overview.en.html).**
 * **[JavaScript](https://www.javascript.com/).**
 * **[Font Awesome CDN](https://cdn.fontawesome.com/).**
 
